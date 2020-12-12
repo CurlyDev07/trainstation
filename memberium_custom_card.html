@@ -1,0 +1,123 @@
+<div class="elementor-column elementor-top-column elementor-element elementor-element-4e06a58" data-id="4e06a58"
+    data-element_type="column" style="
+    -webkit-box-shadow: 0px -2px 137px -56px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px -2px 137px -56px rgba(0,0,0,0.75);
+    box-shadow: 0px -2px 137px -56px rgba(0,0,0,0.75);
+">
+    <div class="elementor-column-wrap">
+        <div class="elementor-widget-wrap">
+            <div class="elementor-element elementor-element-6fa0582 elementor-widget-image" data-id="6fa0582"
+                data-element_type="widget" data-widget_type="image.default ">
+                <div class="elementor-widget-container">
+                    <div class="elementor-image">
+                        <a href="{{atts:course_link}}">
+                            <img width="350" height="168" src="{{atts:course_image_url}}"
+                                class="attachment-large size-large" alt="" loading="lazy"
+                                srcset="{{atts:course_image_url}} 350w, {{atts:course_image_url}}-300x144.png 300w, {{atts:course_image_url}}-50x24.png 50w"
+                                sizes="(max-width: 350px) 100vw, 350px" style="border-radius: 10px 10px 0px 0px;">
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="elementor-element elementor-element-4d1b44f elementor-button-success crs-flt-btn elementor-absolute elementor-widget elementor-widget-button"
+                data-id="4d1b44f" data-element_type="widget"
+                data-settings="{&quot;_position&quot;:&quot;absolute&quot;}" data-widget_type="button.default">
+                <div class="elementor-widget-container">
+                    <div class="elementor-button-wrapper">
+
+                        [memb_has_all_tags1 tagid={{atts:course_tag_id}}]
+                        [memb_has_all_tags2 tagid={{atts:course_completion_tag_id}}]
+                        <a href="#" class="elementor-button-link elementor-button elementor-size-xs" role="button"
+                            style="pointer-events: none;margin-top: 11px;
+                            position: absolute;right: 5%;font-size: 10px;
+                            font-weight: 400;letter-spacing: 1px;padding: 0px 13px;
+                            color: white;font-family: 'Manrope';">
+                            <span class="elementor-button-content-wrapper">
+                                <span class="elementor-button-text">COMPLETED</span>
+                            </span><!-- COMPLETED -->
+                        </a>
+
+                        [else_memb_has_all_tags2]
+                        <a href="#" class="elementor-button-link elementor-button elementor-size-xs" role="button"
+                            style="pointer-events: none;margin-top: 11px;
+                            position: absolute;right: 5%;font-size: 10px;
+                            font-weight: 400;letter-spacing: 1px;padding: 0px 13px;
+                            color: white;font-family: 'Manrope';">
+                            <span class="elementor-button-content-wrapper">
+                                <span class="elementor-button-text">IN PROGRESS</span>
+                            </span><!-- IN PROGRESS -->
+                        </a>
+                        [/memb_has_all_tags2]
+                        [else_memb_has_all_tags1]
+                        <a href="#" class="elementor-button-link elementor-button elementor-size-xs" role="button"
+                            style="pointer-events: none;margin-top: 11px;
+                            position: absolute;right: 5%;font-size: 10px;
+                            font-weight: 400;letter-spacing: 1px;padding: 0px 13px;
+                            color: white;font-family: 'Manrope';">
+                            <span class="elementor-button-content-wrapper">
+                                <span class="elementor-button-text">UNENROLLED</span>
+                            </span><!-- UNENROLLED -->
+                        </a>
+                        [/memb_has_all_tags1]
+                    </div>
+                </div>
+            </div>
+            <section
+                class="elementor-section elementor-inner-section elementor-element elementor-element-f6aaa9c elementor-section-boxed elementor-section-height-default elementor-section-height-default"
+                data-id="f6aaa9c" data-element_type="section"
+                data-settings="{&quot;background_background&quot;:&quot;gradient&quot;}">
+                <div class="elementor-container elementor-column-gap-default">
+                    <div class="elementor-row">
+                        <div class="elementor-column elementor-col-100 elementor-inner-column elementor-element elementor-element-71a03cb"
+                            data-id="71a03cb" data-element_type="column">
+                            <div class="elementor-column-wrap elementor-element-populated" style="padding: 14px 17px;">
+                                <div class="elementor-widget-wrap">
+                                    <div class="elementor-element elementor-element-2d14161 elementor-widget elementor-widget-heading"
+                                        data-id="2d14161" data-element_type="widget" data-widget_type="heading.default">
+                                        <div class="elementor-widget-container">
+
+                                            <h2
+                                                style="font-family: Manrope;font-style: normal;font-weight: 800;font-size: 20px;line-height: 27px;color: #151F1A;margin-bottom: 3px;">
+                                                {{atts:course_title}}
+                                            </h2>
+                                        </div>
+                                    </div>
+                                    <div class="elementor-element elementor-element-3229b3c elementor-widget elementor-widget-text-editor"
+                                        data-id="3229b3c" data-element_type="widget"
+                                        data-widget_type="text-editor.default">
+                                        <div class="elementor-widget-container">
+                                            <div class="elementor-text-editor elementor-clearfix">
+                                                <p
+                                                    style="font-family: Manrope;font-style: normal;font-weight: normal;font-size: 16px;line-height: 22px;color: #9091A5;margin-bottom: 0px;">
+                                                    {{atts:course_description}}
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="elementor-element elementor-element-1a9448a elementor-widget elementor-widget-text-editor"
+                                        data-id="1a9448a" data-element_type="widget"
+                                        data-widget_type="text-editor.default">
+                                        <div class="elementor-widget-container">
+                                            <div class="elementor-text-editor elementor-clearfix">
+
+                                                [memb_has_all_tags tagid={{atts:course_tag_id}}]
+                                                <a href="{{atts:course_link}}" style="color: #3AAE49">
+                                                    Learn More
+                                                </a>
+                                                [else_memb_has_all_tags]
+                                                <a href="{{atts:order_form_link}}" style="color: #3AAE49">
+                                                    Buy Now!
+                                                </a>
+                                                [/memb_has_all_tags]
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+</div>

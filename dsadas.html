@@ -1,0 +1,91 @@
+<!-- --------------------------------------------
+|   member that has access to this section      |
+--------------------------------------------  -->
+[memb_has_membership memberships="{{atts:membership_level}}"]
+<div class="mem_ind-course-wrap nopadding">
+    <div class="memberium-ind-course">
+        <div class="memb-course-complete">
+            <a href="{{atts:course_link}}">
+                <img class="img-fluid" src="{{atts:course_image_url}}" />
+            </a>
+            [memb_has_any_tag tagid="{{atts:course_completion_tag_id}}"]
+            <div class="memb-course-complete-overlay">
+                <i class="fa fa-check" aria-hidden="true"></i>
+            </div>
+            [/memb_has_any_tag]
+        </div>
+        <div class="memberium-ind-course-caption">
+            <a href="{{atts:course_link}}">
+                <h4 class="elementor-heading-title elementor-size-default">{{atts:course_title}}</h4>
+            </a>
+            <p>{{atts:course_description}}</p>
+
+            [memb_is_logged_in]
+            [learndash_course_progress course_id="{{atts:lms_course_id}}"]
+            [/memb_is_logged_in]
+        </div>
+    </div>
+</div>
+[else_memb_has_membership]
+<!-- --------------------------------------------
+|   end member that has access to this section  |
+--------------------------------------------  -->
+
+
+<!-- --------------------------------------------------
+|   START non member - person who doesn't have access  |
+--------------------------------------------------  -->
+
+<div class="mem_ind-course-wrap nopadding">
+    <div class="memberium-ind-course">
+        <div class="locked">
+            <a href="{{atts:course_link}}">
+                <img class="img-fluid" src="{{atts:course_image_url}}" />
+            </a>
+            <div class="memb-course-locked-overlay">
+                <i class="fa fa-lock" aria-hidden="true"></i>
+            </div>
+        </div>
+        <div class="memberium-ind-course-caption">
+            <a href="{{atts:course_link}}">
+                <h4 class="elementor-heading-title elementor-size-default">{{atts:course_title}}</h4>
+            </a>
+            <p>{{atts:course_description}}</p>
+
+            [memb_is_logged_in]
+            <!-- --------------------------------------------------
+                |               Authenticated User                     |
+                --------------------------------------------------  -->
+            <div class="learndash-wrapper learndash-widget">
+                <div class="d-flex justify-content-end">
+                    <a href="{{atts:order_form_link}}" style="
+                            color: #13426b;
+                            font-weight: 800;
+                            text-decoration: underline;
+                        ">Buy Now!</a>
+                </div>
+            </div>
+            [else_memb_is_logged_in]
+            <!-- --------------------------------------------------
+                |              Un Authenticated User                  |
+                --------------------------------------------------  -->
+            [learndash_course_progress course_id="{{atts:lms_course_id}}"]
+            [/memb_is_logged_in]
+
+        </div>
+    </div>
+</div>
+[/memb_has_membership]
+<!-- --------------------------------------------------
+|   END non member - person who doesn't have access   |
+--------------------------------------------------  -->
+
+
+
+
+<a href="#" class="small-button elementor-button-link elementor-button elementor-size-sm" role="button">
+    <span class="elementor-button-content-wrapper">
+        <span class="elementor-button-text elementor-inline-editing" data-elementor-setting-key="text"
+            data-elementor-inline-editing-toolbar="none">Small Button</span>
+    </span>
+</a>
